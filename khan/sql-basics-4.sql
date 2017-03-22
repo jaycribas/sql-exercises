@@ -5,15 +5,23 @@
   - Performs at least one additional SELECT statement using an aggregate function.
 */
 
-CREATE TABLE shoes (id INTEGER PRIMARY KEY, brand TEXT, color TEXT, size INTEGER, type TEXT, quantity INTEGER);
+CREATE TABLE shoes (
+  id INTEGER PRIMARY KEY,
+  brand TEXT,
+  color TEXT,
+  size INTEGER,
+  type TEXT,
+  quantity INTEGER);
 
-INSERT INTO shoes VALUES (1, "Nike", "black", 10, "hi tops", 5);
-INSERT INTO shoes VALUES (2, "Nike", "blue", 10, "hi tops", 2);
-INSERT INTO shoes VALUES (3, "Nike", "white", 10, "hi tops", 4);
-INSERT INTO shoes VALUES (4, "Nike", "orange", 9, "trainers", 2);
-INSERT INTO shoes VALUES (5, "Puma", "black", 7, "trainers", 6);
-INSERT INTO shoes VALUES (6, "Puma", "black", 9, "trainers", 2);
-INSERT INTO shoes VALUES (7, "Puma", "red", 10, "hi tops", 3);
+INSERT INTO shoes
+  VALUES
+  (1, "Nike", "black", 10, "hi tops", 5),
+  (2, "Nike", "blue", 10, "hi tops", 2),
+  (3, "Nike", "white", 10, "hi tops", 4),
+  (4, "Nike", "orange", 9, "trainers", 2),
+  (5, "Puma", "black", 7, "trainers", 6),
+  (6, "Puma", "black", 9, "trainers", 2),
+  (7, "Puma", "red", 10, "hi tops", 3);
 
 SELECT brand, SUM(quantity) FROM shoes
 GROUP BY brand;

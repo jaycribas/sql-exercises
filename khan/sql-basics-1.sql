@@ -6,9 +6,14 @@ STEP 2: Now, add three of your favorite books into the table.
 */
 
 /* STEP 1 */
-CREATE TABLE books (id INTEGER PRIMARY KEY, name TEXT, rating INTEGER);
+CREATE TABLE books (
+  id INTEGER PRIMARY KEY,
+  name TEXT,
+  rating INTEGER);
 
 /* STEP 2 */
-INSERT INTO books VALUES (1, "Harry Potter", 8);
-INSERT INTO books VALUES (2, "Game of Thrones", 9);
-INSERT INTO books VALUES (3, "Jurrasic Park", 7);
+INSERT INTO books
+  VALUES
+  (1, "Harry Potter", 8),
+  (2, "Game of Thrones", 9),
+  (3, "Jurrasic Park", 7);
