@@ -6,7 +6,7 @@
 */
 
 CREATE TABLE zombie_killer (
-  id INTEGER,
+  id INTEGER PRIMARY KEY,
   username TEXT,
   score INTEGER,
   tagline TEXT);

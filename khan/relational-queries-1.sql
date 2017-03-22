@@ -12,31 +12,37 @@ CREATE TABLE persons (
     name TEXT,
     age INTEGER);
 
-INSERT INTO persons (name, age) VALUES ("Bobby McBobbyFace", 12);
-INSERT INTO persons (name, age) VALUES ("Lucy BoBucie", 25);
-INSERT INTO persons (name, age) VALUES ("Banana FoFanna", 14);
-INSERT INTO persons (name, age) VALUES ("Shish Kabob", 20);
-INSERT INTO persons (name, age) VALUES ("Fluffy Sparkles", 8);
+INSERT INTO persons
+  (name, age)
+  VALUES
+  ("Bobby McBobbyFace", 12),
+  ("Lucy BoBucie", 25),
+  ("Banana FoFanna", 14),
+  ("Shish Kabob", 20),
+  ("Fluffy Sparkles", 8),
 /* PART 1 */
-INSERT INTO persons (name, age) VALUES ("Kitty Kat", 5);
+  ("Kitty Kat", 5);
 
 CREATE table hobbies (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     person_id INTEGER,
     name TEXT);
 
-INSERT INTO hobbies (person_id, name) VALUES (1, "drawing");
-INSERT INTO hobbies (person_id, name) VALUES (1, "coding");
-INSERT INTO hobbies (person_id, name) VALUES (2, "dancing");
-INSERT INTO hobbies (person_id, name) VALUES (2, "coding");
-INSERT INTO hobbies (person_id, name) VALUES (3, "skating");
-INSERT INTO hobbies (person_id, name) VALUES (3, "rowing");
-INSERT INTO hobbies (person_id, name) VALUES (3, "drawing");
-INSERT INTO hobbies (person_id, name) VALUES (4, "coding");
-INSERT INTO hobbies (person_id, name) VALUES (4, "dilly-dallying");
-INSERT INTO hobbies (person_id, name) VALUES (4, "meowing");
+INSERT INTO hobbies
+  (person_id, name)
+  VALUES
+  (1, "drawing"),
+  (1, "coding"),
+  (2, "dancing"),
+  (2, "coding"),
+  (3, "skating"),
+  (3, "rowing"),
+  (3, "drawing"),
+  (4, "coding"),
+  (4, "dilly-dallying"),
+  (4, "meowing"),
 /* PART 1 */
-INSERT INTO hobbies (person_id, name) VALUES (6, "meowing");
+  (6, "meowing");
 
 /* PART 2 */
 SELECT persons.name, hobbies.name FROM persons

@@ -12,12 +12,12 @@ CREATE TABLE clothes (
     type TEXT,
     design TEXT);
 
-INSERT INTO clothes (type, design)
-    VALUES ("dress", "pink polka dots");
-INSERT INTO clothes (type, design)
-    VALUES ("pants", "rainbow tie-dye");
-INSERT INTO clothes (type, design)
-    VALUES ("blazer", "black sequin");
+INSERT INTO clothes
+  (type, design)
+  VALUES
+  ("dress", "pink polka dots"),
+  ("pants", "rainbow tie-dye"),
+  ("blazer", "black sequin");
 
 /* STEP 1 */
 ALTER TABLE clothes

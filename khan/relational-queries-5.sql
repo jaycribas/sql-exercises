@@ -18,37 +18,28 @@ CREATE TABLE actors (
   country TEXT,
   friend INTEGER);
 
-INSERT INTO singers (name, age, country)
-  VALUES ("Bjork", 51, "Iceland");
-INSERT INTO singers (name, age, country)
-  VALUES ("MIA", 41, "Sri Lanka");
-INSERT INTO singers (name, age, country)
-  VALUES ("Thom Yorke", 48, "England");
-INSERT INTO singers (name, age, country)
-  VALUES ("Trent Reznor", 51, "USA");
-INSERT INTO singers (name, age, country)
-  VALUES ("Gwen Stefani", 47, "USA");
-INSERT INTO singers (name, age, country)
-  VALUES ("Grimes", 29, "Canada");
-INSERT INTO singers (name, age, country)
-  VALUES ("FKA twigs", 29, "England");
-INSERT INTO singers (name, age, country)
-  VALUES ("Janelle Monae", 31, "USA");
+INSERT INTO singers
+  (name, age, country)
+  VALUES
+  ("Bjork", 51, "Iceland"),
+  ("MIA", 41, "Sri Lanka"),
+  ("Thom Yorke", 48, "England"),
+  ("Trent Reznor", 51, "USA"),
+  ("Gwen Stefani", 47, "USA"),
+  ("Grimes", 29, "Canada"),
+  ("FKA twigs", 29, "England"),
+  ("Janelle Monae", 31, "USA");
 
-INSERT INTO actors (name, age, country, friend)
-  VALUES ("Natalie Portman", 35, "USA", 5);
-INSERT INTO actors (name, age, country, friend)
-  VALUES ("Zoe Saldana", 38, "USA", 7);
-INSERT INTO actors (name, age, country)
-  VALUES ("Hugh Jackman", 48, "Australia");
-INSERT INTO actors (name, age, country, friend)
-  VALUES ("Octavia Spencer", 64, "USA", 8);
-INSERT INTO actors (name, age, country)
-  VALUES ("Emma Stone", 28, "USA");
-INSERT INTO actors (name, age, country)
-  VALUES ("Ryan Gosling", 36, "USA");
-INSERT INTO actors (name, age, country)
-  VALUES ("Meryl Streep", 67, "USA");
+INSERT INTO actors
+  (name, age, country, friend)
+  VALUES
+  ("Natalie Portman", 35, "USA", 5),
+  ("Zoe Saldana", 38, "USA", 7),
+  ("Hugh Jackman", 48, "Australia"),
+  ("Octavia Spencer", 64, "USA", 8),
+  ("Emma Stone", 28, "USA"),
+  ("Ryan Gosling", 36, "USA"),
+  ("Meryl Streep", 67, "USA");
 
 SELECT singers.name, actors.name FROM singers
   JOIN actors
