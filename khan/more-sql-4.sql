@@ -6,34 +6,34 @@ STEP 2: Now, this step is a little tricky. The goal is a table that shows how ma
 */
 
 CREATE TABLE student_grades (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT,
-    number_grade INTEGER,
-    fraction_completed REAL);
+  id INTEGER PRIMARY KEY,
+  name TEXT,
+  number_grade INTEGER,
+  fraction_completed REAL);
 
-INSERT INTO student_grades (name, number_grade, fraction_completed)
-    VALUES ("Winston", 90, 0.805);
-INSERT INTO student_grades (name, number_grade, fraction_completed)
-    VALUES ("Winnefer", 95, 0.901);
-INSERT INTO student_grades (name, number_grade, fraction_completed)
-    VALUES ("Winsteen", 85, 0.906);
-INSERT INTO student_grades (name, number_grade, fraction_completed)
-    VALUES ("Wincifer", 66, 0.7054);
-INSERT INTO student_grades (name, number_grade, fraction_completed)
-    VALUES ("Winster", 76, 0.5013);
-INSERT INTO student_grades (name, number_grade, fraction_completed)
-    VALUES ("Winstonia", 82, 0.9045);
+INSERT INTO student_grades
+  (name, number_grade, fraction_completed)
+  VALUES
+  ("Winston", 90, 0.805),
+  ("Winnefer", 95, 0.901),
+  ("Winsteen", 85, 0.906),
+  ("Wincifer", 66, 0.7054),
+  ("Winster", 76, 0.5013),
+  ("Winstonia", 82, 0.9045);
 
 /* STEP 1 */
-SELECT name, number_grade, ROUND(fraction_completed * 100) AS percent_completed from student_grades;
+SELECT name, number_grade,
+  ROUND( fraction_completed * 100 ) 
+  AS percent_completed
+  FROM student_grades;
 
 /* STEP 2 */
 SELECT COUNT(*),
-    CASE
-        WHEN number_grade > 90 THEN "A"
-        WHEN number_grade > 80 THEN "B"
-        WHEN number_grade > 70 THEN "C"
-        ELSE "F"
-    END as "letter_grade"
-    FROM student_grades
-    GROUP BY letter_grade;
+  CASE
+    WHEN number_grade > 90 THEN "A"
+    WHEN number_grade > 80 THEN "B"
+    WHEN number_grade > 70 THEN "C"
+    ELSE "F"
+    END AS letter_grade
+  FROM student_grades
+  GROUP BY letter_grade;
