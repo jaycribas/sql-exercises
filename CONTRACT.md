@@ -32,7 +32,7 @@ Becoming a full stack web developer means that you need to be comfortable with w
 
 ### Day 2: Relational Queries
 - [x] Complete the [Relational Queries course](https://www.khanacademy.org/computing/computer-programming/sql#relational-queries-in-sql)
-- [ ] Complete the [Modifying databases with SQL course](https://www.khanacademy.org/computing/computer-programming/sql#modifying-databases-with-sql)
+- [x] Complete the [Modifying databases with SQL course](https://www.khanacademy.org/computing/computer-programming/sql#modifying-databases-with-sql)
 
 ### Day 3: Install Postgres and Complete Tutorials with psql
 - [ ] Install Homebrew by following instructions listed [here](https://gist.github.com/punitrathore/ca32542fddd0d8b625aab610c35e4545)
